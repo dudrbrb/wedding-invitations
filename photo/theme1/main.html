@@ -41,15 +41,15 @@
         </div>
         <div class="bar-horz"></div>
         <div class="gallery">
-            <div name="1"><img src="./img/1.jpg" name='1'/></div>
-            <div name="2"><img src="./img/2.jpg" name='2'/></div>
-            <div name="3"><img src="./img/3.jpg" name='3'/></div>
-            <div name="4"><img src="./img/4.jpg" name='4'/></div>
-            <div name="5"><img src="./img/5.jpg" name='5'/></div>
-            <div name="6"><img src="./img/6.jpg" name='6'/></div>
-            <div name="7"><img src="./img/7.jpg" name='7'/></div>
-            <div name="8"><img src="./img/8.jpg" name='8'/></div>
-            <div name="9"><img src="./img/9.jpg" name='9'/></div>
+            <div name="1"><img src="./img/1.png" name='1'/></div>
+            <div name="2"><img src="./img/2.png" name='2'/></div>
+            <div name="3"><img src="./img/3.png" name='3'/></div>
+            <div name="4"><img src="./img/4.png" name='4'/></div>
+            <div name="5"><img src="./img/5.png" name='5'/></div>
+            <div name="6"><img src="./img/6.png" name='6'/></div>
+            <div name="7"><img src="./img/7.png" name='7'/></div>
+            <div name="8"><img src="./img/8.png" name='8'/></div>
+            <div name="9"><img src="./img/9.png" name='9'/></div>
             <p>클릭하면 크게 볼 수 있습니다.</p>
         </div>
         
@@ -160,7 +160,7 @@
         thumbs.forEach(t => {
             t.addEventListener('click', (t)=>{
                 popup.style.display = 'block'
-                popupImg.setAttribute('src', `./img/${t.target.name}.jpg`)
+                popupImg.setAttribute('src', `./img/${t.target.name}.png`)
             })
         })
 
