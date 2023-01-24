@@ -125,6 +125,9 @@ body{
     margin: 20px 0;
 }
 
+.call-info span{
+    display: flex;
+}
 
 
 
