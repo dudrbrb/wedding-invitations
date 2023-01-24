@@ -9,6 +9,12 @@
 </head>
 <body>
     <div class="main">
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="close-btn "></div>
+                <img src="" class="select-img">
+            </div>
+        </div>
         <div class="info">
             <p class="names">전 보 금  ·  이 승 희</p>
             <div class="bar"></div>
@@ -22,7 +28,7 @@
             <b>평생을 같이하고 싶은 사람을 만났습니다.</b>
             <div class="bar"></div>
             <p>
-color                함께해서 행복했고<br>
+                함께해서 행복했고<br>
                 함께해서 큰 기쁨이었으며<br>
                 함께해서 힘든순간 큰 위로가 되었습니다.<br><br>
                 
@@ -35,15 +41,15 @@ color                함께해서 행복했고<br>
         </div>
         <div class="bar-horz"></div>
         <div class="gallery">
-            <div name="1"><img src="./img/1.jpg" /></div>
-            <div name="2"><img src="./img/2.jpg" /></div>
-            <div name="3"><img src="./img/3.jpg" /></div>
-            <div name="4"><img src="./img/4.jpg" /></div>
-            <div name="5"><img src="./img/5.jpg" /></div>
-            <div name="6"><img src="./img/6.jpg" /></div>
-            <div name="7"><img src="./img/7.jpg" /></div>
-            <div name="8"><img src="./img/8.jpg" /></div>
-            <div name="9"><img src="./img/9.jpg" /></div>
+            <div name="1"><img src="./img/1.jpg" name='1'/></div>
+            <div name="2"><img src="./img/2.jpg" name='2'/></div>
+            <div name="3"><img src="./img/3.jpg" name='3'/></div>
+            <div name="4"><img src="./img/4.jpg" name='4'/></div>
+            <div name="5"><img src="./img/5.jpg" name='5'/></div>
+            <div name="6"><img src="./img/6.jpg" name='6'/></div>
+            <div name="7"><img src="./img/7.jpg" name='7'/></div>
+            <div name="8"><img src="./img/8.jpg" name='8'/></div>
+            <div name="9"><img src="./img/9.jpg" name='9'/></div>
             <p>클릭하면 크게 볼 수 있습니다.</p>
         </div>
         
@@ -146,5 +152,25 @@ color                함께해서 행복했고<br>
         </footer>
 
     </div>
+    <script>
+        // 이미지 클릭 시 보여주기
+        var popup = document.querySelector('.popup-wrapper')
+        var popupImg = document.querySelector('.select-img')
+        var thumbs = document.querySelectorAll('.gallery div')
+        thumbs.forEach(t => {
+            t.addEventListener('click', (t)=>{
+                popup.style.display = 'block'
+                popupImg.setAttribute('src', `./img/${t.target.name}.jpg`)
+            })
+        })
+
+
+        // popup 닫기
+        var closeBtn = document.querySelector('.close-btn')
+        closeBtn.addEventListener('click', ()=>{
+            popup.style.display = 'none'
+        })
+    
+    </script>
 </body>
 </html>
