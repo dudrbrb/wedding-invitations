@@ -248,7 +248,10 @@ footer{
 }
 footer ul li{
     color: #fff;
-    margin-bottom: 10px;
+}
+footer ul li+li{
+    margin-top: 10px;
+
 }
 footer p {
     color: #fff;
