@@ -58,15 +58,15 @@
             <div>
                 <p><b>신랑</b>에게 연락하기</p>
                 <span>
-                    <a href='' class="call"></a>
-                    <a href='' class="kakao"></a>
+                    <a href='tel:010-0000-0000' class="call"></a>
+                    <a href='tel:010-0000-0000' class="kakao"></a>
                 </span>
             </div>
             <div>
                 <p><b>신부</b>에게 연락하기</p>
                 <span>
-                    <a href='' class="call"></a>
-                    <a href='' class="kakao"></a>
+                    <a href='tel:010-0000-0000' class="call"></a>
+                    <a href='tel:010-0000-0000' class="kakao"></a>
                 </span>
             </div>
         </div>
@@ -152,6 +152,7 @@
         </footer>
 
     </div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12908540073621cf45b58434e129a8d6"></script>
     <script>
         // 이미지 클릭 시 보여주기
         var popup = document.querySelector('.popup-wrapper')
@@ -170,6 +171,45 @@
         closeBtn.addEventListener('click', ()=>{
             popup.style.display = 'none'
         })
+
+
+        // 메세지 타이핑 모션
+        var typingBool = false; 
+        var typingIdx=0; 
+
+        // 타이핑될 텍스트를 가져온다 
+        var textBox = document.querySelector('.message li:last-child p')
+        var typingTxt = textBox.innerHTML; 
+        textBox.innerHTML = '';
+        typingTxt = typingTxt.split(""); // 한글자씩 자른다. 
+
+        if(typingBool==false){ 
+            // 타이핑이 진행되지 않았다면 
+            typingBool=true;     
+            var tyInt = setInterval(typing,100); // 반복동작 
+            } 
+                
+            function typing(){ 
+            if(typingIdx<typingTxt.length){ 
+                // 타이핑될 텍스트 길이만큼 반복 
+                textBox.innerHTML += typingTxt[typingIdx];
+                // 한글자씩 이어준다. 
+                typingIdx++; 
+            } else{ 
+                //끝나면 반복종료 
+                clearInterval(tyInt); 
+            } 
+        }  
+
+
+        // 지도 띄우기
+        var container = document.querySelector('.map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
     
     </script>
 </body>
