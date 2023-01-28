@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #202020;
+    border: none;
+    outline: none;
+    resize: none;
+}
+body{
+    width: 540px;
+    height: 100vh;
+    margin : 0 auto;
+    position: relative;
+    font-family: 'Gowun Batang', serif;
+}
+.noto{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.intro{
+    width: 100%;
+    height: 100%;
+    background: url('../img/intro.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    text-align: center;
+    font-size: 22px;
+}
+.title .date{
+    margin-bottom: 20px;
+}
+
+.title .names{
+    line-height: 50px;
+    margin-top: 25px;
+    font-size: 26px;
+}
+.title .ment{
+    font-size: 24px;
+}
+
+.go-main-btn{
+    text-align: center;
+    display: block;
+    color: #767676;
+    width: 80px;
+    border-bottom: 1px solid #767676;
+    margin-top: 90px;
+}
+.go-main-btn:active{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #6e6e6e;
+}
