@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 축하 인사 남기기 */
+        .message {
+            margin-bottom: 70px;
+        }
+        .message b{
+            font-size: 22px;
+        }
+        .message ul{
+            width: 90%;
+            margin: 30px auto 50px;
+        }
+        .message ul li{
+            display: flex;
+            font-size: 18px;
+            border-bottom: 1px solid #A4A4A4;
+            padding: 20px 0;
+        }
+        .message ul li span{
+            min-width: 130px;
+            width: 130px;
+            font-weight: 400;
+            text-align: left;
+        }
+        .message ul li p{
+            font-weight: 300;
+        }
+        .send{
+            width: 90%;
+            margin: 30px auto 50px;
+        }
+        .send div{
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .send label{
+            min-width: 130px;
+            width: 130px;
+            font-weight: 400;
+            text-align: left;
+            font-size: 18px;
+        }
+        .send input,
+        .send textarea{
+            border: 1px solid #C1C1C1;
+            width: 330px;
+            height: 45px;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .send textarea{
+            height: 120px;
+        }
+        .send-btn{
+            background-color: #f5c04f;
+            width: 150px;
+            height: 45px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="message">
+        <b>축하 인사 남기기</b>
+
+        <ul class="noto">
+            <li>
+                <span>홍가영</span>
+                <p>언니 결혼 축하해~~</p>
+            </li>
+            <li>
+                <span>홍가영</span>
+                <p>언니 결혼 축하해~~</p>
+            </li>
+            <li>
+                <span>홍가영</span>
+                <p>언니 결혼 축하해~~</p>
+            </li>
+            <li>
+                <span>홍가영</span>
+                <p>언니 결혼 축하해~~</p>
+            </li>
+        </ul>
+
+        <div class="send noto">
+            <div>
+                <label>이름</label>
+                <input type="text" class="noto" maxlength="5">
+            </div>
+            <div>
+                <label>내용</label>
+                <textarea class="noto" maxlength="100"></textarea>
+            </div>
+            <button class="send-btn noto">
+                축하 남기기
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        // 메세지 타이핑 모션
+        var typingBool = false; 
+        var typingIdx=0; 
+
+        // 타이핑될 텍스트를 가져온다 
+        var textBox = document.querySelector('.message li:last-child p')
+        var typingTxt = textBox.innerHTML; 
+        textBox.innerHTML = '';
+        typingTxt = typingTxt.split(""); // 한글자씩 자른다. 
+
+        if(typingBool==false){ 
+            // 타이핑이 진행되지 않았다면 
+            typingBool=true;     
+            var tyInt = setInterval(typing,100); // 반복동작 
+            } 
+                
+            function typing(){ 
+            if(typingIdx<typingTxt.length){ 
+                // 타이핑될 텍스트 길이만큼 반복 
+                textBox.innerHTML += typingTxt[typingIdx];
+                // 한글자씩 이어준다. 
+                typingIdx++; 
+            } else{ 
+                //끝나면 반복종료 
+                clearInterval(tyInt); 
+            } 
+        }  
+
+    </script>
+</body>
+</html>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=540px, initial-scale=no">
-    <title>전보금 · 이승희의 결혼식에 초대합니다</title>
+    <title>김철수 · 이영희의 결혼식에 초대합니다</title>
     <link rel="stylesheet" href="./css/main.css">
 
 
     <meta property="og:type" content="website" /> 
     <meta property="og:image" content="./img/main.png" /> 
-    <meta property="og:title" content="전보금 · 이승희의 결혼식에 초대합니다" />
+    <meta property="og:title" content="김철수 · 이영희의 결혼식에 초대합니다" />
 
 </head>
 <body>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="info">
-            <p class="names">전 보 금  ·  이 승 희</p>
+            <p class="names">김 철 수  ·  이 영 희</p>
             <div class="bar"></div>
             <p>
                 2023.05.13 토요일 오전 11시<br>
@@ -77,43 +77,8 @@
             </div>
         </div>
 
-        <div class="message">
-            <b>축하 인사 남기기</b>
-
-            <ul class="noto">
-                <li>
-                    <span>홍가영</span>
-                    <p>언니 결혼 축하해~~</p>
-                </li>
-                <li>
-                    <span>홍가영</span>
-                    <p>언니 결혼 축하해~~</p>
-                </li>
-                <li>
-                    <span>홍가영</span>
-                    <p>언니 결혼 축하해~~</p>
-                </li>
-                <li>
-                    <span>홍가영</span>
-                    <p>언니 결혼 축하해~~</p>
-                </li>
-            </ul>
-
-            <div class="send noto">
-                <div>
-                    <label>이름</label>
-                    <input type="text" class="noto" maxlength="5">
-                </div>
-                <div>
-                    <label>내용</label>
-                    <textarea class="noto" maxlength="100"></textarea>
-                </div>
-                <button class="send-btn noto">
-                    축하 남기기
-                </button>
-            </div>
-        </div>
-        <div class="location color-bg">
+  
+        <div class="location">
             <b>오시는 길</b>
             <div class="map"></div>
             <p>서울특별시 강남구 서초1길 12-3<br>
@@ -137,6 +102,15 @@
                 </li>
             </ul>
         </div>
+        <div class="cong-money color-bg">
+            <b>마음 전하는 곳</b>
+            <p>마음을 담아 축의금을 전달해보세요</p>
+            <div class="account noto">
+                <p class="acc">국민은행 9869-0200-0069-73</p>
+                <p>예금주 : 김철수</p>
+            </div>
+            <span class="noto copybtn">계좌번호 복사하기</span>
+        </div>
         <footer class="noto">
             <ul>
                 <li>
@@ -145,11 +119,11 @@
                 </li>
                 <li>
                     홈페이지<br>
-                    www.dearyourdays.co.kr
+                    https://kmong.com/@dudrbrb
                 </li>
                 <li>
                     문의하기<br>
-                    hong6v6.dev@gmail.com
+                    https://kmong.com/@dudrbrb
                 </li>
             </ul>
             <p>당신의 앞날을 응원합니다<br>
@@ -158,65 +132,10 @@
         </footer>
 
     </div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12908540073621cf45b58434e129a8d6"></script>
-    <script>
-        // 이미지 클릭 시 보여주기
-        var popup = document.querySelector('.popup-wrapper')
-        var popupImg = document.querySelector('.select-img')
-        var thumbs = document.querySelectorAll('.gallery div')
-        thumbs.forEach(t => {
-            t.addEventListener('click', (t)=>{
-                popup.style.display = 'block'
-                popupImg.setAttribute('src', `./img/${t.target.name}.png`)
-            })
-        })
 
-
-        // popup 닫기
-        var closeBtn = document.querySelector('.close-btn')
-        closeBtn.addEventListener('click', ()=>{
-            popup.style.display = 'none'
-        })
-
-
-        // 메세지 타이핑 모션
-        var typingBool = false; 
-        var typingIdx=0; 
-
-        // 타이핑될 텍스트를 가져온다 
-        var textBox = document.querySelector('.message li:last-child p')
-        var typingTxt = textBox.innerHTML; 
-        textBox.innerHTML = '';
-        typingTxt = typingTxt.split(""); // 한글자씩 자른다. 
-
-        if(typingBool==false){ 
-            // 타이핑이 진행되지 않았다면 
-            typingBool=true;     
-            var tyInt = setInterval(typing,100); // 반복동작 
-            } 
-                
-            function typing(){ 
-            if(typingIdx<typingTxt.length){ 
-                // 타이핑될 텍스트 길이만큼 반복 
-                textBox.innerHTML += typingTxt[typingIdx];
-                // 한글자씩 이어준다. 
-                typingIdx++; 
-            } else{ 
-                //끝나면 반복종료 
-                clearInterval(tyInt); 
-            } 
-        }  
-
-
-        // 지도 띄우기
-        var container = document.querySelector('.map'); //지도를 담을 영역의 DOM 레퍼런스
-        var options = { //지도를 생성할 때 필요한 기본 옵션
-            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-            level: 3 //지도의 레벨(확대, 축소 정도)
-        };
-
-        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
     
-    </script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12908540073621cf45b58434e129a8d6"></script>
+    <script src="./js/main.js"></script>
+     
 </body>
 </html>

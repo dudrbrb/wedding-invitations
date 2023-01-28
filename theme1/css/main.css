@@ -38,14 +38,14 @@ body{
     margin: 60px auto;
 }
 .color-bg{
-    background-color: #FFFAF5;
+    background-color: #FFF5EC;
 }
 .call{
-    background: url('../../../common/img/phone-call.png') no-repeat center;
+    background: url('../img/phone-call.png') no-repeat center;
     background-size: 24px 
 }
 .kakao{
-    background: url('../../../common/img/kakao-talk.png') no-repeat center;
+    background: url('../img/kakao-talk.png') no-repeat center;
     background-size: 28px 
 }
 .call, .kakao{
@@ -115,7 +115,7 @@ body{
 
 /* 신랑/신부에게 연락하기 */
 .call-info{
-    margin: 50px 0 80px;
+    margin: 50px 0 30px;
     padding: 20px 100px;
 }
 .call-info div{
@@ -128,74 +128,6 @@ body{
 .call-info span{
     display: flex;
 }
-
-
-
-
-/* 축하 인사 남기기 */
-.message {
-    margin-bottom: 70px;
-}
-.message b{
-    font-size: 22px;
-}
-.message ul{
-    width: 90%;
-    margin: 30px auto 50px;
-}
-.message ul li{
-    display: flex;
-    font-size: 18px;
-    border-bottom: 1px solid #A4A4A4;
-    padding: 20px 0;
-}
-.message ul li span{
-    min-width: 130px;
-    width: 130px;
-    font-weight: 400;
-    text-align: left;
-}
-.message ul li p{
-    font-weight: 300;
-}
-.send{
-    width: 90%;
-    margin: 30px auto 50px;
-}
-.send div{
-    display: flex;
-    margin-bottom: 10px;
-}
-.send label{
-    min-width: 130px;
-    width: 130px;
-    font-weight: 400;
-    text-align: left;
-    font-size: 18px;
-}
-.send input,
-.send textarea{
-    border: 1px solid #C1C1C1;
-    width: 330px;
-    height: 45px;
-    padding: 5px;
-    font-size: 18px;
-}
-
-.send textarea{
-    height: 120px;
-}
-.send-btn{
-    background-color: #f5c04f;
-    width: 150px;
-    height: 45px;
-    text-align: center;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
 
 
 
@@ -233,6 +165,31 @@ body{
     font-weight: 300;
 }
 
+
+
+/* 마음 전하기 */
+
+.cong-money{
+    padding: 80px 0;
+}
+.cong-money b{
+    font-size: 22px;
+}
+.cong-money .account{
+    background-color: #fff;
+    border-radius: 40px;
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+.cong-money span{
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #757575;
+    cursor: pointer;
+}
 
 
 
@@ -294,8 +251,11 @@ footer span{
 .close-btn{
     width: 35px;
     height: 35px;
-    background: url('../../../common/img/close.png') no-repeat center;
+    background: url('../img/close.png') no-repeat center;
     background-size: 28px;
     right: 0;
     margin-bottom: 20px;
 }
+
+
+
