@@ -135,6 +135,7 @@ body{
 
 .calendar img{
     width: 450px;
+    display: block;
 }
 /* 신랑/신부에게 연락하기 */
 .call-info{
