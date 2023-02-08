@@ -101,13 +101,15 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 .gallery .swiper-slide div{
     width: 150px;
     height: 150px;
     overflow: hidden;
-    margin: 5px;
+    margin: 8px;
+}
+.gallery .swiper-slide div:last-child{
+    margin-right: auto;
 }
 .gallery .swiper-slide div img{
     width: 100%;

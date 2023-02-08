@@ -21,7 +21,8 @@ const makeSwiper = ()=>{
         spaceBetween: 50,
         observer: true,	// 추가
         observeParents: true,	// 추가
-        autoHeight: true
+        autoHeight: true,
+        loop: false,
     });
 
 
