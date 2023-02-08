@@ -156,7 +156,7 @@ body{
     background-color:#fff;
 }
 .location > p{
-    font-size:14px;
+    font-size:16px;
 }
 .location ul{
     margin: 30px auto 0;
@@ -167,13 +167,15 @@ body{
     margin-bottom: 15px;
 }
 .location ul li span{
-    width: 100px;
-    min-width: 100px;
+    width: 80px;
+    min-width: 80px;
     text-align: left;
+    font-size: 18px;
 }
 .location ul li p{
     font-weight: 300;
     text-align: left;
+    font-size: 18px;
 }
 
 

@@ -17,6 +17,7 @@ const makeSwiper = ()=>{
     popupSwiper = new Swiper(".popup-swiper", {
         slidesPerView: 1,
         spaceBetween: 50,
+        observer: true
     });
 
 
@@ -60,8 +61,9 @@ const popupEvent = ()=>{
 
     thumbs.forEach(t => {
         t.addEventListener('click', (t)=>{
-            popup.style.display = 'block'
-            imgIdx = Number(t.target.name)
+            popup.style.display = 'block';
+            imgIdx = Number(t.target.name)-1;
+            popupSwiper.slideTo(imgIdx)
         })    
     })    
     
