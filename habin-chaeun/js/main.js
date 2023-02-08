@@ -13,11 +13,15 @@ const makeSwiper = ()=>{
     gallerySwiper = new Swiper(".gallery-swiper", {
         slidesPerView: 1,
         spaceBetween: 10,
+        observer: true,	// 추가
+        observeParents: true,	// 추가
     });
     popupSwiper = new Swiper(".popup-swiper", {
         slidesPerView: 1,
         spaceBetween: 50,
-        observer: true
+        observer: true,	// 추가
+        observeParents: true,	// 추가
+        autoHeight: true
     });
 
 

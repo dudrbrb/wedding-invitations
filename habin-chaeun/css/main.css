@@ -264,10 +264,24 @@ footer span{
     margin: 50% auto 0;
     transform: translateY(-20%);
 }
+.popup .popup-swiper{
+    width: 450px;
+    height: 800px;
+}
+.popup .swiper-slide {
+    height: 630px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .popup .swiper-slide img{
     width: 450px;
     height: auto;
     object-fit: contain;
+    position: relative;
+    display: block;
 }
 .close-btn{
     width: 35px;
