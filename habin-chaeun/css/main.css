@@ -160,6 +160,9 @@ body{
 .location > p{
     font-size:16px;
 }
+.location .address{
+    font-size: 20px;
+}
 .location ul{
     margin: 30px auto 0;
     width: 350px;
