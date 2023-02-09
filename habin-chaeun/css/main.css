@@ -185,6 +185,7 @@ body{
 .location ul li{
     display: flex;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 .location ul li span{
     width: 80px;
@@ -197,7 +198,18 @@ body{
     text-align: left;
     font-size: 18px;
 }
-
+.location ul li p.point{
+    font-weight: 300;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.location ul li b{
+    font-weight: 500;
+}
 
 
 /* 마음 전하기 */
