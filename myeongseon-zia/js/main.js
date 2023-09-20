@@ -17,7 +17,7 @@
 // }
 
 function copy (t){
-    var textVal = t.replace('-' , "").trim();
+    var textVal = t;
     var textarea = document.createElement('textarea');
     textarea.value = textVal;
     document.body.appendChild(textarea);
