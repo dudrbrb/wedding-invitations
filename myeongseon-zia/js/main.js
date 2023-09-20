@@ -2,7 +2,7 @@
 // 계좌번호 복사하기
 const copy = (text) => {
     // 임시의 textarea 생성
-    const $textarea = document.createElement("textarea");
+    const $textarea = document.createElement("input");
   
     // body 요소에 존재해야 복사가 진행됨
     document.body.appendChild($textarea);
@@ -18,12 +18,12 @@ const copy = (text) => {
 
 
 var copybtn1 = document.querySelector('.copybtn1');
-var copyacc1= String(document.querySelector('.acc1').innerHTML);
+var copyacc1= document.querySelector('.acc1').innerHTML;
 
 copybtn1.addEventListener('click', ()=>{
     copy(copyacc1);
 })
-copybtn1.addEventListener('touchstart', ()=>{
+copybtn1.addEventListener('touch', ()=>{
     copy(copyacc1);
 })
 
@@ -31,23 +31,23 @@ copybtn1.addEventListener('touchstart', ()=>{
 
 
 var copybtn2 = document.querySelector('.copybtn2');
-var copyacc2= String(document.querySelector('.acc2').innerHTML);
+var copyacc2= document.querySelector('.acc2').innerHTML;
 
 copybtn2.addEventListener('click', ()=>{
     copy(copyacc2);
 })
-copybtn2.addEventListener('touchstart', ()=>{
+copybtn2.addEventListener('touch', ()=>{
     copy(copyacc2);
 })
 
 
 
 var copybtn3 = document.querySelector('.copybtn3');
-var copyacc3= String(document.querySelector('.acc3').innerHTML);
+var copyacc3= document.querySelector('.acc3').innerHTML;
 
 copybtn3.addEventListener('click', ()=>{
     copy(copyacc3);
 })
-copybtn3.addEventListener('touchstart', ()=>{
+copybtn3.addEventListener('touch', ()=>{
     copy(copyacc3);
 })
