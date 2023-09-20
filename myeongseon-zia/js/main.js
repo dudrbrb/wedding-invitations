@@ -18,14 +18,10 @@
 
 function copy (t){
     var textVal = t;
-    var textarea = document.createElement('textarea');
-    textarea.value = textVal;
-    document.body.appendChild(textarea);
-    textarea.select();
-    textarea.setSelectionRange(0, 9999);
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    alert("복사되었습니다.");
+    window.navigator.clipboard.writeText(textVal).then(() => {
+        // 복사가 완료되면 이 부분이 호출된다.
+        alert("계좌번호가 복사되었습니다.");
+    });
 }
 
 var copybtn1 = document.querySelector('.copybtn1');
