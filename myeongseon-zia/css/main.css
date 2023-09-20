@@ -285,6 +285,9 @@ footer span{
 
 
 .copybtn{
-    margin-top: 20px;
     display: block;
+    background: none;
+    display: block;
+    margin: 20px auto 0;
+    border-bottom: 1px solid #3d3d3d;
 }
