@@ -25,7 +25,7 @@ function copy (t){
 }
 
 var copybtn1 = document.querySelector('.copybtn1');
-var copyacc1= document.querySelector('.acc1').innerHTML;
+var copyacc1= document.querySelector('.acc1').innerText;
 
 copybtn1.addEventListener('click', ()=>{
     copy(copyacc1);
@@ -38,7 +38,7 @@ copybtn1.addEventListener('touch', ()=>{
 
 
 var copybtn2 = document.querySelector('.copybtn2');
-var copyacc2= document.querySelector('.acc2').innerHTML;
+var copyacc2= document.querySelector('.acc2').innerText;
 
 copybtn2.addEventListener('click', ()=>{
     copy(copyacc2);
@@ -50,7 +50,7 @@ copybtn2.addEventListener('touch', ()=>{
 
 
 var copybtn3 = document.querySelector('.copybtn3');
-var copyacc3= document.querySelector('.acc3').innerHTML;
+var copyacc3= document.querySelector('.acc3').innerText;
 
 copybtn3.addEventListener('click', ()=>{
     copy(copyacc3);
