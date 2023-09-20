@@ -3,7 +3,7 @@
 const copy = (text) => {
     // 임시의 textarea 생성
     const $textarea = document.createElement("input");
-  
+    $textarea.type = "text";
     // body 요소에 존재해야 복사가 진행됨
     document.body.appendChild($textarea);
     
