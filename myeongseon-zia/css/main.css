@@ -121,11 +121,19 @@ img{
     margin: 50px 0 30px;
     padding: 20px 100px;
 }
-.call-info div{
+.call-info b{
+    font-size: 22px;
+    margin: 10px 0; 
+    display: block;
+}
+.call-info > div{
+    margin: 20px 0 ;
+}
+.call-info div div{
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    margin: 20px 0;
+    margin-bottom: 5px;
 }
 
 .call-info span{
@@ -262,3 +270,15 @@ footer span{
 
 
 
+.round-text{
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.round{
+    background-color:#202020;
+    border-radius: 40px;
+    width: 150px;
+    color: #fff;
+    margin: 20px auto;
+    padding : 5px 0;
+}
