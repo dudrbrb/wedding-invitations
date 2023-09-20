@@ -1,21 +1,32 @@
 
 // 계좌번호 복사하기
-const copy = (text) => {
-    // 임시의 textarea 생성
-    const $textarea = document.createElement("input");
-    $textarea.type = "text";
-    // body 요소에 존재해야 복사가 진행됨
-    document.body.appendChild($textarea);
+// const copy = (text) => {
+//     // 임시의 textarea 생성
+//     const $textarea = document.createElement("input");
+//     $textarea.type = "text";
+//     // body 요소에 존재해야 복사가 진행됨
+//     document.body.appendChild($textarea);
     
-    // 복사할 특정 텍스트를 임시의 textarea에 넣어주고 모두 셀렉션 상태
-    $textarea.value = text;
-    $textarea.select();
+//     // 복사할 특정 텍스트를 임시의 textarea에 넣어주고 모두 셀렉션 상태
+//     $textarea.value = text;
+//     $textarea.select();
     
-    // 복사 후 textarea 지우기
-    document.execCommand('copy');
-    document.body.removeChild($textarea);
-}
+//     // 복사 후 textarea 지우기
+//     document.execCommand('copy');
+//     document.body.removeChild($textarea);
+// }
 
+function copy (t){
+    var textVal = t.replace('-' , "").trim();
+    var textarea = document.createElement('textarea');
+    textarea.value = textVal;
+    document.body.appendChild(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, 9999);
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert("복사되었습니다.");
+}
 
 var copybtn1 = document.querySelector('.copybtn1');
 var copyacc1= document.querySelector('.acc1').innerHTML;
